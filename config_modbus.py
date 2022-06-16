@@ -1,2 +1,3 @@
-div_num = 250
-rig_num = 800
+div_num = 100
+rig_num_S = 12000
+rig_num_E = 14000

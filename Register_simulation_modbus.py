@@ -38,14 +38,7 @@ while True:
             for i in range(con.div_num):
                     await asyncio.create_task(getdatafrom_redis(0, i+1,regs_dic,ranges))
             aetime = time()
-<<<<<<< HEAD
-            #print('all-time',aetime-astime)
-    asyncio.run(main())
-    ranges = ranges+1
-    sleep(5)
-=======
             print('all-time',aetime-astime)
     asyncio.run(main())
     ranges = ranges+1
     sleep(5)
->>>>>>> ca9428cd9a85af421cf2a8a28174a6c289dadb86

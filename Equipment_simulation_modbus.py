@@ -11,8 +11,8 @@ async def getdatafrom_redis(delay, slave_num):
     try:
         await asyncio.sleep(delay)
         SLAVE1 = SERVER.add_slave(slave_num)
-        #SLAVE1.add_block('01', cst.READ_COILS, 0, con.rig_num)
-        SLAVE1.add_block('03', cst.HOLDING_REGISTERS,0,con.rig_num)
+        #SLAVE1.add_block('01', cst.READ_COILS, 0, con.rig_num_E)
+        SLAVE1.add_block('03', cst.HOLDING_REGISTERS,con.rig_num_S,con.rig_num_E)
     except BaseException as e:
         print(traceback.format_exc())
 
