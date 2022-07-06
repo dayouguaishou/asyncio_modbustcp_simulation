@@ -1,4 +1,4 @@
-# 利用协程实现模拟多个ModbusTcpServer 
+# 利用协程实现模拟多个ModbusTcpServer并刷新寄存器内的值
 
 0.导入的第三方库
 ----
@@ -44,7 +44,7 @@ Register_simulation_modbus.py --> ModbusTcpServer设备及寄存器更新
 
 启动：
 ----
-```
+```shell
 cd asyncio_modbustcp_simulation
 nohup python3 /root/asyncio_modbustcp_simulation/Equipment_simulation_modbus.py> Equipment_simulation_modbus.log 2>&1 &
 nohup python3 /root/asyncio_modbustcp_simulation/Register_simulation_modbus.py> Register_simulation_modbus.log 2>&1 &
