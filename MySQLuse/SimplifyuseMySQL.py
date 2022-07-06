@@ -110,4 +110,9 @@ def execute_SQLlist_to_mysql(SQLlist=[],filename = "cnf.ini",section="db"):
 
 if __name__ == '__main__':
     print(getConfig(section="db2"))
-    print(select_MYSQL("SELECT * FROM real_data", section="db2"))
+    execute_SQLlist_to_mysql(section="db2",SQLlist=[
+        "UPDATE thtf_table_ai SET  ZHI='100.55' WHERE MING_CHENG='1'",
+        "UPDATE thtf_table_ai SET  ZHI='101.55' WHERE MING_CHENG='2'",
+        "UPDATE thtf_table_ai SET  ZHI='99.55' WHERE MING_CHENG='3'",
+    ])
+    print(select_MYSQL("SELECT * FROM thtf_table_ai LIMIT 3", section="db2"))
